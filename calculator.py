@@ -4,10 +4,10 @@ def calculate_total(items, discount_percent):
     BUG: The discount is currently being ADDED instead of SUBTRACTED.
     """
     subtotal = sum(items)
-    
+
     # Logic error here: + instead of -
-    total = subtotal + (subtotal * (discount_percent / 100))
-    
+    total = subtotal - (subtotal * (discount_percent / 100))
+
     return total
 
 def test_calculator():
@@ -18,3 +18,4 @@ def test_calculator():
 
 if __name__ == "__main__":
     test_calculator()
+
